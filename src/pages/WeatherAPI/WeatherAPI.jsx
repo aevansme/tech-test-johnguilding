@@ -4,9 +4,9 @@ import Card from "../../components/Card";
 
 const WeatherAPI = () => {
 
-  const [ london, setLondon] = useState([]);
-  const [ rome, setRome ] = useState([]);
-  const [ bristol, setBristol ] = useState([]);
+  const [ london, setLondon] = useState(null);
+  const [ rome, setRome ] = useState(null);
+  const [ bristol, setBristol ] = useState(null);
 
   useEffect(() => {
     fetchWeather();
@@ -14,8 +14,8 @@ const WeatherAPI = () => {
 
   // APIKEY: 1acbd84f93b9bf41a917d5cf13ed69eb
 
-  const fetchWeather = async () => {
-    await fetch("http://api.openweathermap.org/data/2.5/group?id=2643744,4749005,4219762&appid=1acbd84f93b9bf41a917d5cf13ed69eb")
+  const fetchWeather = () => {
+    fetch("http://api.openweathermap.org/data/2.5/group?id=2643744,4749005,4219762&appid=1acbd84f93b9bf41a917d5cf13ed69eb")
     .then((response) => response.json())
     .then((response) => {
       setLondon(response.list[0]);
@@ -27,11 +27,7 @@ const WeatherAPI = () => {
   return (
     <>
       <section className={styles.cards}>
-        <Card 
-          london={london}
-          rome={rome}
-          bristol={bristol}
-        />
+        {london && rome && bristol ? <Card london={london} rome={rome} bristol={bristol}/> : <p>loading cards</p>}
       </section>
     </>
   );
