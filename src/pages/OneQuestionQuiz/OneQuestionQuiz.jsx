@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./OneQuestionQuiz.module.scss";
+import Quiz from "./../../components/Quiz";
 
 const OneQuestionQuiz = () => {
   return (
-    <>
-      <p>OneQuestionQuiz works</p>
-    </>
+    <section className={styles.quizContainer}>
+      <Quiz />
+    </section>
   );
 };
 
