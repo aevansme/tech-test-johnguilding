@@ -10,7 +10,11 @@
     color: rgb(192, 192, 192);
     border-radius: 50px;
     background: #EEEEEE;
-    box-shadow:  20px 20px 40px #cacaca
+    box-shadow:  20px 20px 40px #cacaca;
+
+    h2 {
+        color: #7366FF;
+    }
 }
 
 form {
@@ -25,9 +29,12 @@ form {
     }
 
     .submit {
-        border-style: solid;
+        // border-style: solid;
         width: 70px;
         cursor: pointer;
+        // background-image: linear-gradient(to top, (#FF6CAB), (#7366FF));
+        background: #FF6CAB;
+        color: white;
 
         &:focus {
             border-style: none;
