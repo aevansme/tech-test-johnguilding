@@ -1,0 +1,36 @@
+.quiz {
+    margin: 20px;
+    padding: 60px;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(192, 192, 192);
+    border-radius: 50px;
+    background: #EEEEEE;
+    box-shadow:  20px 20px 40px #cacaca
+}
+
+form {
+    // border: 2px solid red;
+
+    input {
+        border-radius: 10px;
+        padding: 5px;
+        border-style: none;
+        height: 50px;
+        width: 200px;
+    }
+
+    .submit {
+        border-style: solid;
+        width: 70px;
+        cursor: pointer;
+
+        &:focus {
+            border-style: none;
+        }
+    }
+}
