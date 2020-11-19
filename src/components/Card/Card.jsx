@@ -23,6 +23,7 @@ const Card = (props) => {
           <div className={styles.container}>
             <div className={styles.img}>
               <div className={styles.circle}></div>
+              <img src={`http://openweathermap.org/img/wn/${london.weather[0].icon}@2x.png`} alt=""/>
             </div>
             <div className={styles.info}>
               <h2 className={styles.title}>{london.name}</h2>
@@ -38,6 +39,7 @@ const Card = (props) => {
           <div className={styles.container}>
             <div className={styles.img}>
               <div className={styles.circle}></div>
+              <img src={`http://openweathermap.org/img/wn/${rome.weather[0].icon}@2x.png`} alt=""/>
             </div>
             <div className={styles.info}>
               <h2 className={styles.title}>{rome.name}</h2>
@@ -53,6 +55,7 @@ const Card = (props) => {
           <div className={styles.container}>
             <div className={styles.img}>
               <div className={styles.circle}></div>
+              <img src={`http://openweathermap.org/img/wn/${bristol.weather[0].icon}@2x.png`} alt=""/>
             </div>
             <div className={styles.info}>
               <h2 className={styles.title}>{bristol.name}</h2>

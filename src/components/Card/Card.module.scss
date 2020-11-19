@@ -38,8 +38,10 @@
     background-image: linear-gradient(to right, (#FF6CAB), (#7366FF));
     position: absolute;
     border-radius: 50%;
+}
+
+img {
     z-index: 1;
-    // border: 2px solid orange;
 }
 
 .info {
