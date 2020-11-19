@@ -18,9 +18,12 @@ const WeatherAPI = () => {
     fetch("http://api.openweathermap.org/data/2.5/group?id=2643744,4749005,4219762&appid=1acbd84f93b9bf41a917d5cf13ed69eb")
     .then((response) => response.json())
     .then((response) => {
-      setLondon(response.list[0]);
-      setBristol(response.list[1]);
-      setRome(response.list[2]);
+      
+      const [london, bristol, rome] = response.list;
+      
+      setLondon(london);
+      setBristol(bristol]);
+      setRome(rome);
     })
   }
 
